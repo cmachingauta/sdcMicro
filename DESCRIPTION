@@ -2,21 +2,21 @@ Package: sdcMicro
 Type: Package
 Title: Statistical Disclosure Control Methods for Anonymization of Microdata and
     Risk Estimation
-Version: 4.6.1
-Date: 2016-08-19
+Version: 5.0.0
+Date: 2017-01-03
 Author: Matthias Templ, Alexander Kowarik, Bernhard Meindl
 Maintainer: Matthias Templ <matthias.templ@gmail.com>
 Description: Data from statistical agencies and other institutions are mostly
     confidential. This package can be used for the generation of anonymized
     (micro)data, i.e. for the creation of public- and scientific-use files. In
     addition, various risk estimation methods are included. Note that the package
-    'sdcMicroGUI' includes a graphical user interface for various methods in this
+    includes a graphical user interface that allows to use various methods of this
     package.
 LazyData: TRUE
 ByteCompile: TRUE
 LinkingTo: Rcpp
 Depends:
-    R (>= 2.10),rmarkdown,knitr,data.table,xtable
+    R (>= 2.10)
 Suggests:
     laeken,testthat
 Imports:
@@ -24,6 +24,10 @@ Imports:
     stats,
     graphics,
     car,
+    rmarkdown,
+    knitr,
+    data.table,
+    xtable,
     robustbase,
     cluster,
     MASS,
@@ -32,13 +36,21 @@ Imports:
     Rcpp,
     methods,
     sets,
-    ggplot2
+    ggplot2,
+    shiny,
+    haven,
+    rhandsontable,
+    DT,
+    shinyBS,
+    prettydoc
 License: GPL-2
-URL: https://github.com/alexkowa/sdcMicro
+URL: https://github.com/sdcTools/sdcMicro
 Collate:
     '0classes.r'
+    'addGhostVars.R'
     'addNoise.r'
     'aux_functions.r'
+    'createNewID.R'
     'dataGen.r'
     'dataSets.R'
     'dRisk.R'
@@ -46,6 +58,7 @@ Collate:
     'dUtility.R'
     'freqCalc.r'
     'globalRecode.R'
+    'groupAndRename.R'
     'GUIfunctions.R'
     'indivRisk.R'
     'LLmodGlobalRisk.R'
@@ -73,5 +86,7 @@ Collate:
     'printFunctions.R'
     'mafast.R'
     'maG.R'
+    'sdcApp.R'
     'show_sdcMicroObj.R'
 RoxygenNote: 5.0.1
+VignetteBuilder: knitr

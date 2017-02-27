@@ -14,3 +14,6 @@ vignettes/sdc_guidelines.tex
 .project
 .Rproj.user
 *.Rproj
+inst/shiny-examples/sdcGUI/issues*
+inst/doc
+notes_and_testdata
